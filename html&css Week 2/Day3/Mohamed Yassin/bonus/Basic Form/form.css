@@ -1,0 +1,38 @@
+body{
+    background-color:rgb(102, 102, 255)
+}
+.container{
+    border: 1px solid rgb(227, 227, 227);
+    width: 40%;
+    margin: 50px auto;
+    position: relative;
+    background-color: white;
+
+}
+.img img{
+    width: 80px;
+    margin-left: calc(50% - 40px);
+    margin-top: 5px;
+}
+.container div:nth-child(2),
+.container div:nth-child(3){
+    text-align: center;
+    margin-bottom: 5px;
+}
+.container div:nth-child(3) input:focus{
+    outline: none;
+}
+.container div:nth-child(3) input{
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(132, 132, 132);
+}
+.container div:nth-child(3) input[type="submit"]{
+    border: none;
+    width: 60%;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+    background-color:rgb(41, 138, 242);
+    color: white;
+}

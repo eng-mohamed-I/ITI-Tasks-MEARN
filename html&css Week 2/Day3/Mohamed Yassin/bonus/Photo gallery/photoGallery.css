@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+div div {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: calc(100% / 3 - 15px);
+    height: 250px;
+    border: 1px solid rgb(130, 130, 130);
+    margin: 5px;
+}
+
+img{ 
+    text-align: center;
+    height: 150px;
+    width: 96% ;
+    margin: 5px;
+}
+
+.container{
+    background-color: rgb(195, 195, 195);
+    margin: 10px auto;
+    width: 850px;
+    border: 1px solid black;
+    padding: 10px;
+}
+p{
+    margin-left: 5px;
+}
+
+div div p:nth-child(1){
+    font-size: 1rem;
+    font-weight: bold;
+}

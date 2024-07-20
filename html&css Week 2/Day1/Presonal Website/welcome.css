@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(204, 204, 204)
+}
+
+img{
+    margin: 20px auto;
+    display: block;
+}
+
+a{
+    text-align: center;
+    display: block;
+}
+.social{
+    border: 1px solid black;
+}
+body{
+    background-image: url(images/welcome\ image.jpg);
+}

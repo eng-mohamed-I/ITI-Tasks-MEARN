@@ -1,0 +1,56 @@
+*{
+    font-family: itifont;
+}
+@font-face {
+    font-family: itifont;
+    src: url(fonts/lucida-calligraphy-new/LucidaCalligraphyNewBold.ttf);
+}
+#header {
+    text-align: center;
+     width:100%;
+     background-color: red;
+     float: left;
+     font-family:itifont
+}
+#linksbar {
+    width:25%;
+    background-color: gray;
+    float: left;
+}
+#content {
+    width: 75%;
+    background-color: pink;
+    float: left; 
+}
+.none-bullet-list {
+    list-style: none;
+}
+.none-bullet-list li>a{ 
+    text-decoration: none;
+}
+.none-bullet-list li>a:hover{
+    color: red;
+    background-color: pink;
+
+}
+#content > h2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+#content p{ 
+    color: red;
+}
+#loginform{
+    border: 2px dashed black;
+    color:rgb(20,70,60);
+}
+#loginform input[type="text"]:focus {
+    background-color: yellow;
+}
+.tabled-borderd{
+    padding: 5px; 
+    border: 2px solid black;
+    display: inline;
+    float: left;
+
+}

@@ -1,0 +1,26 @@
+.container{
+    background-color: #bfbebe;
+     padding: 0px;
+     border: 1px solid black;
+     width: 800px;
+     margin: 10px auto;
+
+}
+.container nav{
+    text-align: center;
+}
+.container header{
+    text-align: center;
+}
+.container footer{ 
+    text-align: center;
+}
+.container teble tr { 
+    padding : 10px;
+}
+iframe{ 
+    margin: 10px auto;
+    display: flex;
+    width:300px; 
+    height: 150px;
+}

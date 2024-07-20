@@ -1,0 +1,52 @@
+.container{
+    position: relative;
+    border: 1px solid black;
+    height: 600px;
+    width: 60%;
+    margin: 10px auto; 
+}
+.me{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    right: 30px;
+}
+h1{
+    text-align: center;
+}
+img{ 
+    width: 30px;
+    height: 30px;
+}
+.social{
+    margin: 5px auto;
+    width: 98%;
+    margin-top: 5px;
+    border : 1px solid black;
+    text-align: center;
+    background-color: rgb(135, 135, 135);
+}
+.links{
+    margin-top: 5px;
+    text-align: center;
+    
+}
+.links a{ 
+    margin-right: 5px;
+}
+.copy{
+    text-align: center;
+    color: red;
+}
+body{
+    background-image: url(images/welcome\ image.jpg);
+
+}
+iframe {
+    margin: 10px auto;
+    display: block;
+}
+.container {
+    background-color: white;
+}
