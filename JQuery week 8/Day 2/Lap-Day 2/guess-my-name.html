@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <title>Guess My Name</title>
+    <style type="text/css">
+      body {
+        background-color: rgba(0, 0, 0, 0.889);
+        margin: 0px;
+      }
+      * {
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      h1 {
+        background-color: rgb(42, 42, 42);
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        color: white;
+        padding: 10px;
+      }
+      .contain {
+        margin: 20px auto;
+        border: 1px solid rgba(0, 103, 9, 0.445);
+        background-color: rgb(228, 228, 228);
+        width: 400px;
+        height: 400px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contain div {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 40%;
+        text-align: center;
+        transform: translateX(-50%);
+        background-color: rgba(0, 194, 219, 0.411);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .contain input {
+        outline: none;
+        border: 1px solid rgba(0, 128, 0, 0.612);
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px gray;
+        width: 80%;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .contain h2 {
+        position: absolute;
+        top: 60%;
+      }
+      .contain .result {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .contain h6 {
+        position: absolute;
+        bottom: 0px;
+      }
+      footer {
+        color: white;
+        position: fixed;
+        padding: 10px;
+        bottom: 0px;
+        background-color: rgb(63, 63, 63);
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let counter = 0;
+        const correctName = "Mohamed";
+
+        $("#my-name").on("input", function () {
+          const guessedName = $(this).val().trim();
+          $(".my-name").text(guessedName);
+
+          if (guessedName !== "") {
+            counter++;
+            $(".counter").text(counter);
+
+            if (guessedName === correctName) {
+              $(".result").text(`Good Job! You got it in ${counter} times`);
+              $(".result").css("color", "green");
+            } else {
+              $(".result").text("Try again.");
+              $(".result").css("color", "red");
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>(ITI JQuery Tasks) <br />Guess My Namebr</h1>
+    <div class="contain">
+      <div>counter: <span class="counter"> 0 </span></div>
+      <input type="text" id="my-name" placeholder="Guess My Name" />
+      <h2 class="my-name"></h2>
+      <p class="result"></p>
+      <h6>Answer: Mohamed</h6>
+    </div>
+    <footer>Edit by Eng.Mohamed Yassin &copy;</footer>
+  </body>
+</html>
+<!--[if gte mso 9
+  ]><xml>
+    <mso:CustomDocumentProperties>
+      <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+        msdt:dt="string"
+        >lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+      >
+      <mso:Order msdt:dt="string">20100.0000000000</mso:Order>
+      <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+        msdt:dt="string"
+        >lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+      >
+      <mso:ContentTypeId msdt:dt="string">0x0101</mso:ContentTypeId>
+    </mso:CustomDocumentProperties>
+  </xml><!
+[endif]-->

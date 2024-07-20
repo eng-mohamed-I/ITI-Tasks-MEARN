@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <title>CRUD</title>
+
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //add a new person
+        $("#add").click(function () {
+          const name = $("#name").val().trim();
+          const age = $("#age").val().trim();
+
+          if (name !== "" && age !== "") {
+            const person = `<tr>
+			  <td>${name}</td>
+			  <td>${age}</td>
+			  <td><button class="delete">Delete</button></td>
+			</tr>`;
+
+            $("#persons-list tbody").append(person);
+            $("#name").val("");
+            $("#age").val("");
+          } else {
+            alert("Please write name and age");
+          }
+        });
+
+        // delete a person
+        $("#persons-list").on("click", ".delete", function () {
+          $(this).closest("tr").remove();
+        });
+
+        // search persons
+        $("#search").click(function () {
+          const searchValue = $("#search-item").val().toLowerCase();
+
+          $("#persons-list tbody tr").filter(function () {
+            $(this).toggle(
+              $(this).text().toLowerCase().indexOf(searchValue) > -1
+            );
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="contain">
+      <div class="add-l">
+        <h3>Add New Person</h3>
+        <input type="text" id="name" name="name" placeholder="Name" />
+
+        <input type="text" id="age" name="age" placeholder="Age" />
+
+        <button id="add">Add new Person</button>
+      </div>
+    </div>
+    <div class="list">
+      <div class="aa-list">
+        <h3>Persons List</h3>
+        <input type="text" placeholder="search" id="search-item" />
+        <button id="search">search</button>
+      </div>
+      <table id="persons-list">
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Delete</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      body {
+        background-color: rgba(0, 0, 0, 0.924);
+      }
+
+      .aa-list {
+        position: absolute;
+        top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .aa-list input {
+        width: 100%;
+        padding: 5px;
+        outline: none;
+        border: 1px solid rgba(0, 0, 193, 0.68);
+        border-radius: 3px;
+      }
+      .aa-list button {
+        padding: 5px;
+        background-color: rgba(0, 128, 0, 0.85);
+        border-radius: 4px;
+        border: 1px solid green;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .aa-list button:hover {
+        background-color: green;
+      }
+      .contain {
+        padding: 10px;
+        border: 1px solid gray;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        width: 400px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .add-l {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        gap: 10px;
+      }
+      .add-l input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid rgba(0, 128, 0, 0.615);
+        border-radius: 4px;
+        background-color: transparent;
+      }
+      .add-l button {
+        width: 40;
+        padding: 10px;
+        background-color: #2079ff;
+        color: white;
+        border: 1px solid #2079ff;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .add-l button:hover {
+        background-color: #0066ff;
+      }
+      .list {
+        background-color: whitesmoke;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 1300px;
+        height: 450px;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+      table {
+        border: 1px solid gray;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        padding: 10px;
+      }
+      table tbody td {
+        border: 1px solid rgba(34, 0, 255, 0.358);
+        text-align: center;
+        background-color: rgba(7, 138, 53, 0.243);
+        padding: 5px;
+      }
+      .delete {
+        cursor: pointer;
+        padding: 3px;
+        background-color: rgba(255, 0, 0, 0.669);
+        color: white;
+        border: 1px solid red;
+        border-radius: 2px;
+      }
+    </style>
+  </body>
+</html>
+
+<!--[if gte mso 9
+  ]><xml>
+    <mso:CustomDocumentProperties>
+      <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+        msdt:dt="string"
+        >lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+      >
+      <mso:Order msdt:dt="string">19900.0000000000</mso:Order>
+      <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+        msdt:dt="string"
+        >lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+      >
+      <mso:ContentTypeId msdt:dt="string">0x0101</mso:ContentTypeId>
+    </mso:CustomDocumentProperties>
+  </xml><!
+[endif]-->
