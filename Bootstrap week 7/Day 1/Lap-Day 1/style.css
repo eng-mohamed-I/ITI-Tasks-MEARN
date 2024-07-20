@@ -1,0 +1,125 @@
+* { 
+    margin: 0;
+    box-sizing: border-box;
+}
+body { 
+    height: 100vh;
+    width: 100%;
+}
+.container { 
+    margin: 10px auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    column-gap: 10px;
+}
+.aside {
+    /* background-color: rgba(255, 255, 255, 0.36); */
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+.aside .c-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+} 
+.aside .c-aside p {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: gray;
+    text-align: center;
+    padding: 5px;
+}
+.aside .c-aside p a {
+    width: 100%;
+}
+
+.c-aside img { 
+    width: 100%;
+}
+
+.main {
+
+    
+    height: 100%;
+    width: 70%;
+    background-color: rgba(233, 233, 233, 0.478);
+}
+.p-section { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 10px;
+}
+
+.p-section div { 
+    border: 1px solud black;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+} 
+.p-section img { 
+    width: 100%;
+    /* max-width: 600px; */
+}
+
+.m-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.m-section .pics { 
+    width: 24%;
+    box-sizing: border-box;
+}
+
+.m-section .pics img { 
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .aside, .main {
+        width: 100%;
+    }
+    .m-section .pics {
+        width: 48%; 
+    }
+    .c-aside { 
+        width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .p-section div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .m-section .pics {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .c-aside img{
+        display: none;
+    };
+}

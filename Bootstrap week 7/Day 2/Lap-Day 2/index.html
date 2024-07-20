@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Lap-d-2</title>
+  </head>
+  <body>
+    <!-- nvbar -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary shadow-lg position-fixed top-0 w-100 z-3"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Vacation Rentals</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Top Destination</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Book Tricks</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Header Style -->
+    <header
+      class="d-flex w-100 justify-content-center align-items-center flex-column"
+      style="
+        background-image: url(imgs/p10.jpg);
+        background-size: 100%;
+        height: 500px;
+        overflow: hidden;
+      "
+    >
+      <h2>Best Vaction Rentals</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <button class="btn btn-primary">Start Now!</button>
+    </header>
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center shadow p-5">
+              <div
+                class="d-flex justify-content-center align-items-center mb-3"
+                style="height: 200px"
+              >
+                <img
+                  src="imgs/p2.jpg"
+                  class="rounded-circle"
+                  style="width: 200px; height: 200px"
+                  alt="Card Image"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">One</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-outline-primary w-100">420$</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center shadow p-5">
+              <div
+                class="d-flex justify-content-center align-items-center mb-3"
+                style="height: 200px"
+              >
+                <img
+                  src="imgs/p7.jpg"
+                  class="rounded-circle"
+                  style="width: 200px; height: 200px"
+                  alt="Card Image"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Two</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-outline-success w-100">420$</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center shadow p-5">
+              <div
+                class="d-flex justify-content-center align-items-center mb-3"
+                style="height: 200px"
+              >
+                <img
+                  src="imgs/p8.jpg"
+                  class="rounded-circle"
+                  style="width: 200px; height: 200px"
+                  alt="Card Image"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Three</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-outline-danger w-100">420$</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-dark text-center mt-5">
+      <p style="color: white">&copy; Edit by Eng.Mohamed Yassin</p>
+      <a href="#" class="btn btn-link">About Us</a>
+      <a href="#" class="btn btn-link">Support 24/7</a>
+      <a href="#" class="btn btn-link">Privacy Policy</a>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
